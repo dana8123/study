@@ -97,7 +97,7 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 3));
 // DRU principle (don't repeat your self)
 
-*/
+
 
 //////////////////////////////////////
 ////////////review function///////////
@@ -124,3 +124,47 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, "YJ"));
 console.log(yearsUntilRetirement(1970, "KJ"));
+
+
+
+///////////////////////////
+/////array/////////////////
+///////////////////////////
+const friends = ["Micheal", "steven", "peter"];
+console.log(friends);
+
+const years = new Array(1991, 1994, 2008, 2020);
+console.log(friends[0]);
+
+*/
+
+const friends = ["Micheal", "steven", "peter"];
+// push function은 새로운 array를 return한다.
+// ADD elements
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("John");
+console.log(friends);
+
+// Remove elements
+const popped = friends.pop(); // Last element
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+console.log(friends.indexOf("steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes("23"));
+console.log(friends.includes(23));
+
+if (friends.includes("peter")) {
+	console.log("You have friend called peter");
+}
