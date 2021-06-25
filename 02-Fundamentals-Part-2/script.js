@@ -169,7 +169,7 @@ if (friends.includes("peter")) {
 	console.log("You have friend called peter");
 }
 
-*/
+
 
 //////////////////
 const jonasArray = [
@@ -202,4 +202,81 @@ const nameKey = "Name";
 console.log(jonas["first" + nameKey]);
 console.log(jonas["last" + nameKey]);
 
-console.log(jonas.'last' + nameKey) // unexpected string
+//console.log(jonas.'last' + nameKey) // unexpected string
+//dot notation 과 bracket notation 쓰임의 차이는
+// 위처럼 연산이 필요한 과정에서는 bracket notation으로 사용하고 이외에는 dot으로
+// dot이 더 깔끔하고 쓰기 쉬우니까
+/*const interestedIn = prompt(
+	"what do you want know about me? choose between fistName, lasName, and friends"
+);
+//bracket notation을 사용할 때 작동함
+console.log(jonas[interestedIn]);
+//dot notation을 사용할 때 작동 안함
+//console.log(jonas.interestedIn);
+
+if (jonas[interestedIn]) {
+	console.log(jonas[interestedIn]);
+} else {
+	console.log("wrong request!");
+}
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonassschemtman";
+console.log(jonas);
+
+//challenge
+console.log(
+	`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+*/
+
+///////////////////////
+//////object method////
+///////////////////////
+
+const jonas = {
+	firstName: "Jonas",
+	lastName: "Schedtman",
+	birthYear: 1991,
+	age: 2037 - 1991,
+	job: "teacher",
+	friends: ["Micheal", "Peter", "Steven"],
+	hasDriverLicense: true,
+	//function expression, function value
+	// calcAge: function (birthYear) {
+	// 	return 2037 - birthYear;
+	// },
+	// this = equal to the object calling the method, basically equal to the object
+	// calcAge: function () {
+	// 	console.log(this);
+	// 	return 2037 - this.birthYear;
+	// },
+	//jonas object가 calcAge를 호출하는 유일한 메서드이기 때문에 this = jonas
+
+	// 새롭게 계산할 필요가 없음
+	calcAge: function (birthYear) {
+		this.age = 2037 - this.birthYear;
+		return this.age;
+	},
+
+	getSummary: function () {
+		return `${this.firstName} is a ${this.calcAge()}-year old ${
+			jonas.job
+		}, and he has ${this.hasDriverLicense ? "a" : "no"} driver license`;
+	},
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
+
+// console.log(jonas.calcAge(1991));
+// console.log(jonas["calcAge"](1991));
+
+//function declaration
+// const calcAge = function (birthYear) {
+// 	return 2037 - birthYear;
+// };
+
+// callenge
+console.log(jonas.getSummary());
