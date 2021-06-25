@@ -136,7 +136,7 @@ console.log(friends);
 const years = new Array(1991, 1994, 2008, 2020);
 console.log(friends[0]);
 
-*/
+
 
 const friends = ["Micheal", "steven", "peter"];
 // push function은 새로운 array를 return한다.
@@ -168,3 +168,38 @@ console.log(friends.includes(23));
 if (friends.includes("peter")) {
 	console.log("You have friend called peter");
 }
+
+*/
+
+//////////////////
+const jonasArray = [
+	"Jonas",
+	"Schemedtmann",
+	2037 - 1991,
+	"teacher",
+	["Micheal", "Peter", "Steven"],
+];
+
+//각각의 키는 value를 갖고있다.
+//각각의 키는 property라고 불린다.
+//jonas오브젝트는 다섯개의 property를 갖고있다.
+// object literal syntax
+// 어레이와 오브젝트의 차이점은 oredered와 unstructure데이터라는 것
+const jonas = {
+	firstName: "Jonas",
+	lastName: "Schedtman",
+	age: 2037 - 1991,
+	job: "teacher",
+	friends: ["Micheal", "Peter", "Steven"],
+};
+
+console.log(jonas);
+// braket notation
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+console.log(jonas.'last' + nameKey) // unexpected string

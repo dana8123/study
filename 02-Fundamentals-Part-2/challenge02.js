@@ -24,7 +24,7 @@ DolphinsScore = calcAverage(85, 54, 41);
 koalasScore = calcAverage(23, 34, 27);
 console.log(DolphinsScore, koalasScore);
 checkWinner(DolphinsScore, koalasScore);
-*/
+
 
 // coding challenge #2
 
@@ -49,3 +49,5 @@ const calcTip = function (bill) {
 };
 
 calcTip(bills);
+
+
