@@ -50,4 +50,43 @@ const calcTip = function (bill) {
 
 calcTip(bills);
 
+*/
 
+// challenge3
+const mark = {
+	fullName: "mark miller",
+	mass: 78,
+	height: 1.69,
+	calcBMI: function (mass, height) {
+		this.BMI = this.mass / this.height ** 2;
+		return this.BMI;
+	},
+};
+
+const john = {
+	fullName: "john smith",
+	mass: 92,
+	height: 1.95,
+	calcBMI: function (mass, height) {
+		this.BMI = this.mass / this.height ** 2;
+		return this.BMI;
+	},
+};
+
+// const calcBMI = (mass, height) => {
+// 	this.BMI = this.mass / (this.height * this.height);
+// };
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+
+if (mark.BMI > john.BMI) {
+	console.log(
+		`${mark.fullName}'s BMI (${mark.BMI}) is heigher than ${john.fullName}'s(${john.BMI}`
+	);
+} else {
+	console.log(
+		`${john.fullName}'s BMI (${john.BMI}) is heigher than ${mark.fullName}'s(${mark.BMI})`
+	);
+	ㄴ;
+}

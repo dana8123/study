@@ -228,7 +228,7 @@ console.log(jonas);
 console.log(
 	`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
 );
-*/
+
 
 ///////////////////////
 //////object method////
@@ -280,3 +280,67 @@ console.log(jonas.age);
 
 // callenge
 console.log(jonas.getSummary());
+
+
+const jonas = [
+	"Jonas",
+	"Schmedtmann",
+	2037 - 1991,
+	"teacher",
+	["Micheal", "Peter", "Steven"],
+	true,
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+	console.log(jonas[i], typeof jonas[i]);
+
+	//types[i] = typeof jonas[i];
+	types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+	ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+console.log("ONLY STRING");
+for (let i = 0; i < jonas.length; i++) {
+	if (typeof jonas[i] !== "string") continue;
+	console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log("BREAK WITH NUMBER");
+for (let i = 0; i < jonas.length; i++) {
+	if (typeof jonas[i] !== "number") break;
+	console.log(jonas[i], typeof jonas[i]);
+}
+
+*/
+
+const jonas = [
+	"Jonas",
+	"Schmedtmann",
+	2037 - 1991,
+	"teacher",
+	["Micheal", "Peter", "Steven"],
+	true,
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+	console.log(jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+	console.log(`--------------Starting exercise${exercise}`);
+	for (let rep = 1; rep < 6; rep++) {
+		console.log(`Lifting weight repeating${rep}`);
+	}
+}
