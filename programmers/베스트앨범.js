@@ -6,7 +6,7 @@ function solution(genres, plays) {
 			hash[cur].plays += plays[i];
 		}
 		hash[cur].music.push([i, plays[i]]);
-		//console.log(hash);
+		console.log("=======>", hash);
 		return hash;
 	}, {});
 
