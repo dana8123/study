@@ -51,7 +51,6 @@ const addExpr = function (a, b) {
 	return a + b;
 };
 const arrow = (a, b) => a + b;
-*/
 
 if (!numProduct) deleteShoppingCart();
 
@@ -67,3 +66,41 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+	console.log(2037 - birthYear);
+	console.log(this); //undefined
+};
+
+calcAge(1994);
+
+const calcAgeArrow = (birthYear) => {
+	console.log(2037 - birthYear);
+	console.log(this); //window
+};
+
+calcAgeArrow(1994);
+
+const jonas = {
+	year: 1991,
+	calcAge: function () {
+		console.log(this); //jonas object
+		console.log(2037 - this.year);
+	},
+};
+
+jonas.calcAge();
+
+const matilda = {
+	year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+const f = jonas.calcAge;
+f(); //this = undefined
+ㅎ;
