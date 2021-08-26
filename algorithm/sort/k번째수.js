@@ -1,4 +1,4 @@
-/*function solution(array, commands) {
+function solution(array, commands) {
 	const answer = [];
 	for (let a = 0; a < commands.length; a++) {
 		let i = commands[a][0];
@@ -10,22 +10,6 @@
 		answer.push(copyArray[k - 1]);
 	}
 	console.log(answer);
-	return answer;
-}
-*/
-
-function solution(array, commands) {
-	const answer = [];
-	for (let a = 0; a < commands.length; a++) {
-		let i = commands[a][0];
-		let j = commands[a][1];
-		let k = commands[a][2];
-
-		let copyArray = array.slice(i - 1, j);
-		//버블정렬
-		for (let b = 0; b < copyArray.length; b++) {}
-		copyArray.answer.push(copyArray[k - 1]);
-	}
 	return answer;
 }
 
