@@ -9,17 +9,14 @@ const isValid = function (s) {
 	for (let i = 0; i < s.length; i++) {
 		if (pairs.hasOwnProperty([s[i]])) {
 			stack.push(s[i]);
-			continue;
-		}
-		if (pairs[stack[stack.length - 1]] === s[i]) {
+		} else if (pairs[stack[stack.length - 1]] === s[i]) {
 			stack.pop();
-			continue;
+		} else {
+			return false;
 		}
-		return false;
 	}
 	console.log(stack.length);
-	if (stack.length === 0) return true;
-	return false;
+	return stack.length === 0;
 };
 
 console.log(isValid("([}}])"));
